@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:reg@1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #aa076b, #61045f);
+  font-family: "Raleway", sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+#particles-js {
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  min-height: 400px;
+  background-color: #f4f4f4;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 2.5rem;
+  z-index: 10;
+}
+
+.container h1 {
+  font-size: 1.4rem;
+  color: #393939;
+}
+
+.answer-container {
+  margin: 1.7rem 0 1rem 0;
+}
+
+.answer-container ul {
+  list-style: none;
+}
+
+.answer-container ul li {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.answer-container ul li.correct {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: green;
+  color: #fff;
+}
+
+.answer-container ul li.wrong {
+  background-color: red;
+  color: #fff;
+}
+
+.answer-container ul li.disabled {
+  pointer-events: none;
+}
+
+.container button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #61045f;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+
+.container button:hover {
+  background-color: #880f59d2;
+}
+
+.score-card {
+  position: absolute;
+  top: 28%;
+  left: 0.9%;
+  width: 250px;
+  height: 320px;
+  background-color: #f4f4f4;
+  padding: 25px;
+  transform: translateY(-1000%);
+  transition: transform 1.5s ease-in-out;
+  z-index: 1000;
+}
+
+.show {
+  transform: translateY(0%);
+}
+
+.score-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+
+.score-card .img-container {
+  max-width: 100%;
+  max-height: 90%;
+  margin-bottom: 0.4rem;
+}
+
+.score-card .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.score-card button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #61045f;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  color: #f4f4f4;
+  transition: all 0.5s ease;
+}
+
+.score-card button:hover {
+  background-color: #aa076b;
+}
+
+@media screen and (max-width: 790px) {
+  .back-drop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    z-index: 100;
+    animation: show 0.6s ease forwards;
+  }
+  .score-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: none;
+  }
+  div.display {
+    display: inline-block;
+  }
+}
+
+@keyframes show {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

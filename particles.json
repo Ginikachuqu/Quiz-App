@@ -1,0 +1,38 @@
+{
+  "particles": {
+    "number": {
+      "value": 150
+    },
+    "color": {
+      "value": "#fff"
+    },
+    "shape": {
+      "type": "triangle"
+    },
+    "opacity": {
+      "value": 0.5
+    },
+    "size": {
+      "value": 5,
+      "random": true
+    },
+    "line-linked": {
+      "enable": true
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {}
+    },
+    "modes": {
+      "repulse": {
+        "distance": 50,
+        "duration": 0.4
+      }
+    }
+  }
+}

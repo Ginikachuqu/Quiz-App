@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="particles-js">
+      <div class="container">
+        <h1 id="question"></h1>
+        <div class="answer-container">
+          <ul>
+            <li id="a"></li>
+            <li id="b"></li>
+            <li id="c"></li>
+            <li id="d"></li>
+          </ul>
+        </div>
+        <button id="submit" type="submit">Submit</button>
+      </div>
+    </div>
+    <div class="back-drop">
+      <div class="score-card">
+        <h2>
+          Congratulations! You got <span id="score"></span> out of
+          <span id="total-score"></span> answers correct
+        </h2>
+        <div class="img-container"></div>
+        <button id="try-again">Try Again</button>
+      </div>
+    </div>
+
+    <script src="particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <script src="think.js"></script>
+    <script>
+      particlesJS.load("particles-js", "particles.json", function () {
+        console.log("particles.json loaded...");
+      });
+    </script>
+  </body>
+</html>
